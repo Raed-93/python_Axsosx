@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="/result" method="post" class="class">
+        <fieldset>
+            <div class="class_1">
+                <label>Your Name :</label>
+                <input type="text" name="userName">
+            </div>
+            <div class="class_1">
+                <label>Dojo Location :</label>
+                <select name="dojoLocations" id="">
+                    <option value="Palestine">Palestine</option>
+                    <option value="Gremany">Gremany</option>
+                    <option value="Jordan">Jordan</option>
+                </select>
+            </div>
+            <div class="class_1">
+                <label>Favoritet Language :</label>
+                <select name="FavoritetLanguage" id="">
+                    <option value="Arabic">Arabic</option>
+                    <option value="English">English</option>
+                    <option value="spanish">spanish</option>
+                </select>
+            </div>
+            <div class="class_1">
+                <label >Gender</label>
+                <input type="radio" id="Gender1" name="Gender" value="Female">
+                <label for="Gender1">Female</label><br>
+                <input type="radio" id="Gender2" name="Gender" value="Male">
+                <label for="Gender2">Male</label><br>  
+                
+            
+            </div>
+            <div class="class_1">
+                <label>Transport</label>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle1" value="walk">
+                <label for="vehicle3"> I can walk</label><br><br>
+            </div>
+            <div class="class_1">
+                <label >Comment (optional)</label>
+                </div>
+                <div class="class_1">
+                <textarea name="comment" id="" cols="50" rows="5"></textarea>
+            </div>
+            <button class="class_2">Button</button>
+        </fieldset>
+       </form>
+</body>
+</html>

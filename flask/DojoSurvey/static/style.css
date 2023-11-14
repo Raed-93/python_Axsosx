@@ -1,0 +1,41 @@
+.class{
+    text-align: center;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+.class_1{
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.class_2{
+    background-color: green;
+    padding: 5px;
+    margin-left: 335px;
+}
+
+.index{
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+   margin: 5px;
+}
+h2{
+    text-decoration: underline;
+    text-align: left;
+}
+
+.index_2{
+    border: 1px solid black;
+    width: 30%;
+    font-size: 20px;
+    text-align: right;
+}
+
+.box{
+    background-color: green;
+    padding: 5px;
+}

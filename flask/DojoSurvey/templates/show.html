@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset class="index_2">
+        <h2>submitted info</h2>
+        <div class="index">
+            <p>Name: {{ userName }}</p>
+        </div>
+        <div class="index">
+            <p>Dojo Location:</p> 
+            <p>{{ dojoLocations }}</p>
+        </div>
+        <div class="index">
+            <p>Favoritet Language :</p>
+            <p>{{FavoritetLanguage}}</p>
+        </div>
+        <div class="index">
+            <p>Gender:</p>
+            <p>{{Gender}}</p>
+        </div>
+        <div class="index">
+            <p>Transport:</p>
+            <p>{{vehicle}}</p>
+        </div>
+        <div class="index">
+            <p>Comment</p>
+            <p>{{comments}}</p>
+        </div>
+        <button class="box">Go back</button>
+    </fieldset>
+</body>
+</html>
