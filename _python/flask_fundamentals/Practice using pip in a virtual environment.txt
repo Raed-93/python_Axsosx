@@ -1,0 +1,23 @@
+1-pip list : show the packages.
+2-deactivate : This will deactivate my virtual environment.
+3-pip list3 : all package deactivate.
+4-call myEnvironments/py3Env/Scripts/activate : activate my environment.
+5-pip install Django==2.2.4 : install the package of django and show the virgin.
+6-pip freeze : requirements.
+7- pip freeze > requirements.txt :
+
+asgiref==3.7.2
+blinker==1.7.0
+click==8.1.7
+colorama==0.4.6
+Django==4.2.7
+Flask==3.0.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+sqlparse==0.4.4
+tzdata==2023.3
+Werkzeug==3.0.1
+
+8-pip pip uninstall Django : uninstall the package of django.
+9-pip show Django :no django packge.
