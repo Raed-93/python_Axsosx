@@ -14,7 +14,7 @@ def result():
     comment= request.form['comment']
     Gender=request.form['Gender']
     vehicle=request.form['vehicle1']
-    return render_template('show.html',userName=name, dojoLocations=location,FavoritetLanguage= language,comments=comment,Gender=Gender,vehicle=vehicle)
+    return render_template('show.html',userName=name, dojoLocation=location,FavoritetLanguage= language,comments=comment,Gender=Gender,vehicle=vehicle)
 
 
 if __name__=="__main__":
