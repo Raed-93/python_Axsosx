@@ -1,7 +1,7 @@
 class User:
     def __init__(self, name, balance):
         self.name = name
-        self.balance = balance
+        self.balance = 0
 
     def make_withdrawal(self, amount):
         if amount > 0 and amount <= self.balance:
