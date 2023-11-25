@@ -1,13 +1,13 @@
 class User:
     def __init__(self, name, balance):
         self.name = name
-        self.balance = BankAccount(int_rate=0.02, balance=0)
+        self.balance = BankAccount(0.02, balance)
 
     def add_account(self,account):
         self.account.append(account)
 
     def deposit(self,amount):
-        self.balance.deposit(amount)
+        self.balance.deposit_bank(amount)
         return self
 
 
@@ -30,12 +30,11 @@ class User:
 
 
 class BankAccount:
-    def __init__(self,name,int_rate):
-        self.name = name
+    def __init__(self,int_rate, balance):
         self.int_rate = int_rate
-        self.balance = 0
+        self.balance = balance
 
-    def deposit(self,amount):
+    def deposit_bank(self,amount):
         self.balance += amount
         return self
     
@@ -55,6 +54,6 @@ class BankAccount:
         if self.balance > 0:
             self.balance += self.balance * self.int_rate
         return self
-raed = BankAccount(name = "Raed",int_rate=0.02)
-ahmad = BankAccount(name ="Ahmad",int_rate=0.03)
+raed = User("Raed",10000).deposit(200).display_user_balance()
+ahmad = User("Ahmad",200000)
 
