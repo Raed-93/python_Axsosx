@@ -23,7 +23,7 @@ def reset_add(request):
 
     elif request.POST['submit'] == "add":
         number = request.POST['number']
-        request.session["countTwo"] += int(number)
+        request.session["countTwo"] += (int(number))
     request.session["total"] = request.session["countOne"] + request.session["countTwo"]
     return redirect("/") 
 
