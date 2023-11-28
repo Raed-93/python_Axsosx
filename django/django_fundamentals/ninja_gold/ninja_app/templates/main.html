@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <h3>Your Gold</h3>
+    <input type="text" name="gold" id="gold" value = {{request.session.gold}} disabled>
+
+    <div>
+        <h4>Farm</h4>
+        <p>(earns 10-20 gold)</p>
+        <form action="/process" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="place" value ="farm">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h4>House</h4>
+        <p>(earns 10-20 gold)</p>
+        <form action="/process" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="place" value="house">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h4>Cave</h4>
+        <p>(earns 10-20 gold)</p>
+        <form action="/process" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="place" value="cave">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h4>Quest</h4>
+        <p>(earns/lose 0-50 gold)</p>
+        <form action="/process" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="place" value="quest">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+
+</body>
+</html>

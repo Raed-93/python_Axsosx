@@ -1,0 +1,17 @@
+python manage.py shell
+
+from user_app.models import Users
+
+Users.objects.all()
+
+Users.objects.first()
+Users.objects.last()
+
+user1=Users.objects.get(id=3)
+user1.last_name="Pancakes"
+user1.save()
+
+user1 =Users.objects.get(id=2)
+user1.delete()
+
+Users.objects.filter(first_name="raed")

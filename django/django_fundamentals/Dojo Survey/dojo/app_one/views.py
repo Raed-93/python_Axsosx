@@ -16,6 +16,7 @@ def create_result(request):
     }
 
     return render(request,"show.html",context)
+    
 
 def succes(request):
     # request.session['raed']
