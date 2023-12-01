@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p1>{{new_book.title}}</p1>
+    
+        <p>ID: {{new_book.id}}</p>
+        <p>Description:{{new_book.description}}</p>
+        <br>
+        <p>Authors</p>
+        <ul>
+            {%for author in author_book%}
+            <li>{{author.first_name}} {{author.last_name}}</li>
+            {%endfor%}
+        </ul>
+        <br>
+        <select name="" id="">
+            {%for author in all_auther%}
+            <option value="">{{author.first_name}} {{author.last_name}}</option>
+            {%endfor%}
+        </select>
+        
+        <input type="submit" name="Add" value="Add">
+      
+</body>
+</html>

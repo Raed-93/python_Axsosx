@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tv Form</title>
+</head>
+<body>
+    <form action="/shows/tv_add" method="post">
+        {%csrf_token%}
+        <input type="text" name="title">
+        <input type="text" name="network">
+        <!-- <input type="datetime" name="release_date"> -->
+        <textarea name="discription" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
