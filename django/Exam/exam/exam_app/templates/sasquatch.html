@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasquatch</title>
+    <style>
+        .class{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Sasquatch Websighting</h1>
+        <br>
+        <br>
+        <h2>Reported Sightings</h2>
+        <br>
+        <br>
+        <h3 class="class">Location is required</h3>
+        <br>
+
+    <form action="/new" method="post">
+        {%csrf_token%}
+        <label>Location</label>
+        <input type="text" name="location">
+        <br>
+        <br>
+        <label>Date of Sightings</label>
+        <input type="date" name="date">
+        <br>
+        <br>
+        <label>Number of Sasquatches</label>
+        <input type="number" name="number">
+        <br>
+        <br>
+        <label>What Happend?</label>
+        <br>
+        <textarea name="WhatHappend"cols="20" rows="5"></textarea>
+        <br>
+        <br>
+        <input type="submit" name="Report" value="Report">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {%csrf_token%}
+        <label>Location</label>
+        <input type="text" name="location">
+        <br>
+        <br>
+        <label>Date of Sightings</label>
+        <input type="date" name="date">
+        <br>
+        <br>
+        <label>Number of Sasquatches</label>
+        <input type="number" name="number">
+        <br>
+        <br>
+        <label>What Happend?</label>
+        <br>
+        <textarea name="WhatHappend"cols="20" rows="5"></textarea>
+        <br>
+        <br>
+        <input type="submit" name="Report" value="Report">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashbord</title>
+</head>
+<body>
+    <h1>Sasquatch Websighting</h1>
+    <br>
+    <br>
+    <h2>Reported Sightings</h2>
+    <br>
+    <br>
+    <table border="1px">
+        <tr>
+            {%for page in new_page%}
+          <th>{{page.location}}</th>
+          <td>Date of Sighting:{{page.location}}</td>
+          <td>Reported by:</td>
+          <td><a href="">Edit</a>  <a href="">Delet</a>  <a href="/view">View</a></td>
+          {%endfor%}
+        </tr>
+      </table>
+      <br>
+      <br>
+    <a href="/sightings/new">Report a Sighting</a>
+    <br>
+    <a href="/destroy">Logout</a>
+</body>
+</html>

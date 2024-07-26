@@ -19,3 +19,6 @@ def index(request):
     return redirect("/")
 
 # Create your views here.
+
+
+

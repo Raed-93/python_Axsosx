@@ -128,6 +128,7 @@
 # print(ultimate_analysis([37,2,1,-9]))
 
 #9
+# يوجد اكثر من طريقه للحل
 
 def reverse_list(num):
     x = len(num)
@@ -137,3 +138,39 @@ def reverse_list(num):
         num[i] = temp
     return num
 print(reverse_list([3,2,5,9,7]))
+##################################
+def revers_list(lst):
+    left = 0
+    right = len(lst) -1
+    
+    while left < right:
+        temp = lst[left]
+        lst[left] = lst[right]
+        lst[right] = temp
+        
+        left += 1
+        right -= 1
+        
+    return lst 
+result = revers_list(["a", "b", "c", "d", "e"])
+print(result)
+###################################
+def revers_list(lst):
+    lst[0], lst[1] = lst[1], lst[0]
+    return lst
+arr = revers_list(["a", "b", "c", "d", "e"])
+print(arr)
+###################################
+def reverse_list(lst):
+    left = 0
+    right = len(lst) - 1
+
+    while left < right:
+        lst[left], lst[right] = lst[right], lst[left]
+        left += 1
+        right -= 1
+
+    return lst
+
+arr = reverse_list(["a", "b", "c", "d", "e"])
+print(arr)
