@@ -1,30 +1,24 @@
+# main.py
 from store import Store
 from product import Product
 
+# إنشاء متجر ومنتجات
 store = Store("My Store")
 product1 = Product("Laptop", 1000, "Electronics")
-product2 = Product("Phone", 500, "Electronics")
-product3 = Product("Shirt", 50, "Clothing")
+product2 = Product("Car", 10000, "Vehicle")
 
-store.add_product(product1).add_product(product2).add_product(product3)
+# إضافة المنتجات إلى المتجر
+store.add_product(product1).add_product(product2)
 
-print("Before inflation:")
+# عرض معلومات المنتجات قبل البيع
+print("Products before selling:")
 for product in store.products:
     product.print_info()
-    
-store.inflation(10)  
-print("\n After inflation:")
+
+# بيع منتج باستخدام معرفه الفريد
+store.sell_product(product1.product_id)
+
+# عرض معلومات المنتجات بعد البيع
+print("\nProducts after selling:")
 for product in store.products:
     product.print_info()
-    
-store.set_clearance("Electronics", 20)  
-print("\n After the reduction:")
-for product in store.products:
-    product.print_info()
-    
-store.sell_product(1)  
-
-
-
-
-
