@@ -1,11 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter</title>
 </head>
 <body>
-    <h1>Counter</h1>
-    <p>{{count}}</p>
+    <h1>Current Counter: {{ session['counter'] }}</h1>
+
+ 
+    <form action="/incrementBy2" method="POST">
+        <button type="submit">Add Tow Visets</button>
+    </form>
+    <br>
+    <form action="/increment" method="POST">
+        <label for="increment_value">Increment by:</label>
+        <input type="number" name="increment_value" id="increment_value" required>
+        <button type="submit">Increase Counter</button>
+    </form>
+    <br>
+    <form action="/destroy_session" method="POST">
+        <button type="submit">Reset Counter</button>
+    </form>
 </body>
 </html>
