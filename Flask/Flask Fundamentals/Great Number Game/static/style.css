@@ -3,6 +3,13 @@ body {
     text-align: center;
     margin-top: 50px;
 }
+
+h1 {
+    color: red;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
 .result {
     margin: 20px 0;
     font-size: 24px;
@@ -16,6 +23,14 @@ body {
     width: 200px;
     border-radius: 5px;
 }
+.blue {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    border-radius: 5px;
+}
 .green {
     color: white;
     background-color: green;
@@ -24,7 +39,7 @@ body {
     width: 300px;
     border-radius: 5px;
 }
-input[type="number"] {
+input[type="number"], input[type="text"] {
     padding: 10px;
     font-size: 18px;
 }
@@ -33,7 +48,138 @@ button {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    background-color: cornflowerblue;
 }
 .reset-btn {
     margin-top: 30px;
 }
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Existing styles leaderboard*/
+
+.body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: gray;
+    color: #333;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+a:link, a:visited {
+    background-color: #f44336; 
+    color: white; 
+    padding: 14px 25px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    border: 2px solid #f44336; 
+    border-radius: 5px; 
+    margin-top: 10px;
+}
+
+a:hover, a:active {
+    background-color: red; 
+    color: white; 
+    border-color: red; 
+}
+
+/* style winner.html */
+
+.congratulations {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #00796b;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.winner-details {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+.btn-container {
+    margin-top: 30px;
+}
+.play-again-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.play-again-btn:hover {
+    background-color: #004d40;
+}
+.leaderboard-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.leaderboard-btn:hover {
+    background-color: #00251a;
+}
+

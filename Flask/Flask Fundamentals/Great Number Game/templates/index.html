@@ -7,25 +7,25 @@
     <title>Great Number Game</title>
 </head>
 <body>
-    <h1>Welcom to the Great Number Game!</h1>
+    <h1>Welcome to the Great Number Game!</h1>
     <h2>I'm thinking of a number between 1 and 100...</h2>
     <h2>Take a guess!</h2>
     
     {% if session['result'] %}
-    <div class="result {{ session['color'] }}">{{ session['result'] }}</div>
-{% endif %}
+        <div class="result {{ session['color'] }}">{{ session['result'] }}</div>
+    {% endif %}
 
-{% if session['result'] is none or 'Correct!' not in session['result'] %}
-    <form action="/guess" method="POST">
-        <input type="number" name="guess" min="1" max="100" required>
-        <button type="submit">Submit Guess</button>
-    </form>
-{% endif %}
+    {% if session['result'] is none or ('Correct!' not in session['result'] and 'You Lose!' not in session['result']) %}
+        <form action="/guess" method="POST">
+            <input type="number" name="guess" min="1" max="100" required>
+            <button type="submit">Submit Guess</button>
+        </form>
+    {% endif %}
 
-{% if session['result'] and 'Correct!' in session['result'] %}
-    <form action="/reset" method="GET" class="reset-btn">
-        <button type="submit">Play Again</button>
-    </form>
-{% endif %}
+    {% if session['result'] and ('Correct!' in session['result'] or 'You Lose!' in session['result']) %}
+        <form action="/reset" method="GET" class="reset-btn">
+            <button type="submit">Try Again</button>
+        </form>
+    {% endif %}
 </body>
 </html>
