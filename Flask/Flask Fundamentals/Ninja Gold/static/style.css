@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styling */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Gold count styling */
+.gold-count {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Building sections styling */
+.building {
+    background-color: #e6ffe6;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Form button styling */
+.building form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.building form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Activities section styling */
+.activities {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 150px;
+    overflow-y: auto;
+}
+
+/* Activities list styling */
+.activities ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activities ul li {
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #ffeeba;
+    border-radius: 3px;
+}
+
+/* Reset button styling */
+.reset-btn {
+    margin-top: 20px;
+}
+
+.reset-btn form input[type="submit"] {
+    background-color: #dc3545; /* Red background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reset-btn form input[type="submit"]:hover {
+    background-color: #c82333; /* Darker red on hover */
+}

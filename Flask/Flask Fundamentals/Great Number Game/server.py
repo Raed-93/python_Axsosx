@@ -57,7 +57,7 @@ def reset():
 
 @app.route('/leaderboard')
 def leaderboard_page():
-    return render_template('leaderboard.html', leaderboard=leaderboard)
+    return render_template('leaderboard.html', leade=leaderboard)
 
 if __name__ == "__main__":
     app.run(debug=True)
