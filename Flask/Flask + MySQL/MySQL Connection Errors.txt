@@ -1,0 +1,5 @@
+1- pymysql.err.OperationalError: (1049, "Unknown database 'first_flas'")
+the name of the database is not correct
+
+2- package is required for sha256_password or caching_sha2_password auth methods
+ronge user name

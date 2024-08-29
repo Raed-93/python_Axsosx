@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Read Pets</title>
+</head>
+<body>
+    <div class="content">
+    <h1 style="text-align: center;">All The Pest!</h1>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Type</th>
+        </tr>
+        {% for one_pet in all_pets %}
+        <tr>
+          <td>{{one_pet["pets_id"]}}</td>
+          <td>{{one_pet["name"]}}</td>
+          <td>{{one_pet["type"]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+
+    <h1 style="text-align: center;">Add a Pet</h1>
+        <form action="/create_pet" method="POST" style="display:ruby-text;;">
+            <p>Name: <input type="text" name="pname"></p>
+            <p>Type: <input type="text" name="ptype"></p>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+</body>
+</html>
