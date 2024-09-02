@@ -1,4 +1,3 @@
-# الكود الأول: إغلاق الاتصال بعد كل استعلام
 import pymysql.cursors
 class MySQLConnection:
     def __init__(self, db):
@@ -41,60 +40,3 @@ class MySQLConnection:
 # connectToMySQL receives the database we're using and uses it to create an instance of MySQLConnection
 def connectToMySQL(db):
     return MySQLConnection(db)
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # الكود الثاني: عدم إغلاق الاتصال بعد كل استعلام
-# # AUTO_INCREMENT
-# import pymysql.cursors
-
-# class MySQLConnection:
-#     def __init__(self, db):
-#         self.connection = pymysql.connect(
-#             host='localhost',
-#             user='root',
-#             password='root',
-#             db=db,
-#             charset='utf8mb4',
-#             cursorclass=pymysql.cursors.DictCursor,
-#             autocommit=True
-#         )
-    
-#     def query_db(self, query, data=None):
-#         with self.connection.cursor() as cursor:
-#             try:
-#                 query = cursor.mogrify(query, data)
-#                 print("Running Query:", query)
-                
-#                 executable = cursor.execute(query, data)
-#                 if query.lower().find("insert") >= 0:
-#                     self.connection.commit()
-#                     return cursor.lastrowid
-#                 elif query.lower().find("select") >= 0:
-#                     result = cursor.fetchall()
-#                     return result
-#                 else:
-#                     self.connection.commit()
-#             except Exception as e:
-#                 print("Something went wrong", e)
-#                 return False
-
-#     def __del__(self):
-#         if self.connection:
-#             self.connection.close()  #  هنا يتم إغلاق الاتصال عند انتهاء الاستخدام
-
-# # this connectToMySQL function creates an instance of MySQLConnection, which will be used by server.py
-# # connectToMySQL receives the database we're using and uses it to create an instance of MySQLConnection
-# def connectToMySQL(db):
-#     return MySQLConnection(db)
-

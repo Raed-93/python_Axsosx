@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Users</title>
+</head>
+<body>
+  <h1>Users List</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Created At</th>
+      <th>Action</th>
+    </tr>
+    {% for user in all_users %}
+    <tr>
+      <td>{{ user['user_id'] }}</td>
+      <td>{{ user["first_name"] }} {{ user["last_name"] }}</td>
+      <td>{{ user["email"] }}</td>
+      <td>{{ user["created_at"] }}</td>
+      <td>
+        <div class="button-container">
+          <!-- Delete Button -->
+          <form action="/delete_user/{{ user['user_id'] }}" method="POST" style="display:inline;">
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this user?');">
+          </form>
+          <!-- Update Button -->
+          <a href="/edit/user/{{ user['user_id'] }}" class="button-link">
+            <input type="button" value="Edit">
+          </a>
+          <!-- Show Details Button -->
+          <a href="/show/user/{{ user['user_id'] }}" class="button-link">
+            <input type="button" value="Show">
+          </a>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <!-- لكي يعمل الرابط يجب انشاء مسار اخر داخل ملف server.py 
+  يكون من نوع GIT  
+    لعرض ملف new_user.html  -->
+  <a href="/create_user" class="button-link">Add a New User</a>
+</body>
+</html>
